@@ -1,14 +1,13 @@
-import unittest, sys
+import unittest
 
 from argument import arg_handler
 
 class TestArg(unittest.TestCase):
 
-    def test_arg_exists(self):
-        self.assertTrue(arg_handler.process_args("myarg"), "It exists")
-
-    def test_arg_empty(self):
-        self.assertFalse(arg_handler.process_args(""), "It doesn't exists")
+# Only testing that the arguments don't exist. We really don't need to test argument handling.
+    def test_arg_not_exists(self):
+        with self.assertRaises(SystemExit):
+            arg_handler.process_args()
 
 if __name__ == '__main__':
     unittest.main()

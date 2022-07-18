@@ -1,5 +1,5 @@
 # Script to fetch some json from https://stat.ripe.net/data/country-resource-list/data.json?resource=US&v4_format=prefix and parse it
-# import sys, requests
+import sys, requests
 from argument import arg_handler
 from poller import poll
 from storage import datastore
